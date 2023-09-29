@@ -1,14 +1,22 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
+
+  /**
+   * This program will display a scene with a flower and a cloud when run. 
+   * @author: C. Tarla
+   */
 	
-	
+public Sketch() {
+  super();
+}
+
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
   public void settings() {
 	// put your size call here
-    size(400, 400);
+    size(500, 500);
   }
 
   /** 
@@ -16,21 +24,24 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
+    background(182, 239, 252);
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	  // Draw a flower with circles  
+    stroke(43, 97, 143);
+    fill(43, 97, 143);
+    ellipse(width*.25f, height*.25f, width/2f, height/2f);
+    ellipse(width*.75f, height*.25f, width/2f, height/2f);
+    ellipse(width*.25f, height*.75f, width/2f, height/2f);
+    ellipse(width*.75f, height*.75f, width/2f, height/2f);
+    stroke(235, 182, 9);
+    fill(235, 182, 9);
+    ellipse(width/2f, height/2f, width/2f, height/2f);
 
-    stroke(255);
-    line(50, 125, 70, 50);  
   }
   
-  // define other methods down here.
 }
